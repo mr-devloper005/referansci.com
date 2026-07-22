@@ -1,159 +1,179 @@
 import { slot4BrandConfig } from '@/editable/theme/brand.config'
 
+/*
+  Copy is written for a bookmarks / collections / resources site.
+  Never say "social bookmarking" (renamed to "The Library") or
+  "profiles" (hidden from public UI) in user-visible text.
+*/
 export const pagesContent = {
   home: {
     metadata: {
-      title: 'Stories, visuals, and discoverable content',
-      description: 'Explore articles, images, listings, and curated posts through a cleaner reading-first experience.',
-      openGraphTitle: 'Stories, visuals, and discoverable content',
-      openGraphDescription: 'Discover articles, visual posts, and connected content through a calmer reading-first experience.',
-      keywords: ['story platform', 'article site', 'visual content', 'content discovery'],
+      title: `${slot4BrandConfig.siteName} — a quiet home for the internet worth keeping`,
+      description:
+        'Save any link, sort it into a collection, come back and it is still there. Curated bookmarks and resources, kept tidy.',
+      openGraphTitle: `${slot4BrandConfig.siteName} — the Library`,
+      openGraphDescription:
+        'A quiet home for the internet worth keeping. Curated collections of bookmarks, tools, references and reading.',
+      keywords: ['bookmarks', 'collections', 'resources', 'curated links', 'reference'],
     },
     hero: {
-      badge: 'Latest stories and visuals',
-      title: ['A thoughtful home for', 'stories, visuals, and discovery.'],
-      description: 'Explore fresh articles, image-led posts, and discoverable content across the platform through a calmer and clearer browsing experience.',
-      primaryCta: { label: 'Read latest stories', href: '/article' },
-      secondaryCta: { label: 'Explore visuals', href: '/image' },
-      searchPlaceholder: 'Search stories, visuals, listings, and more',
-      focusLabel: 'Focus',
-      featureCardBadge: 'latest cover rotation',
-      featureCardTitle: 'Latest posts shape the visual identity of the homepage.',
-      featureCardDescription: 'Recent images and stories stay at the center of the experience without changing any core platform behavior.',
+      badge: 'The Library · Curated finds',
+      title: ['Bookmarks worth', 'coming back to.'],
+      description:
+        'A quiet home for the internet you actually use — save any link, sort it into a shelf, and come back to it whenever you need to.',
+      primaryCta: { label: 'Open the Library', href: '/sbm' },
+      secondaryCta: { label: 'Browse collections', href: '/sbm' },
+      searchPlaceholder: 'Search collections, resources, curators…',
+      focusLabel: 'On the shelf',
+      featureCardBadge: 'Editor’s pick',
+      featureCardTitle: 'The best resource on the shelf this week.',
+      featureCardDescription:
+        'Every collection surfaces one Editor’s pick — a resource we keep reaching for and think you will too.',
     },
     intro: {
-      badge: 'About the platform',
-      title: 'Built for reading, browsing, and connecting different kinds of content.',
+      badge: 'How the Library works',
+      title: 'Not a feed. A shelf.',
       paragraphs: [
-        'This site brings together article-style reading, visual browsing, and structured discovery so visitors can move naturally between different content types.',
-        'Instead of separating stories, visuals, and supporting resources into disconnected surfaces, the platform keeps them connected in one place with consistent navigation and easier exploration.',
-        'Whether someone starts with a story, an image-led post, a listing, or a resource page, they can keep discovering related content without friction.',
+        'Feeds forget. Shelves remember. Every resource you save stays exactly where you put it — no re-ranking, no timeline, no algorithm deciding what you see next.',
+        'Collections are shelves. Move a link between them whenever you rethink it. Make a shelf public and it gets its own clean page you can share; keep it private and it is only for you.',
+        'The Library is browsable without an account. You only sign in when you want to add your own resources or build private shelves.',
       ],
       sideBadge: 'At a glance',
       sidePoints: [
-        'Reading-first homepage with stronger emphasis on stories and imagery.',
-        'Connected sections for articles, visuals, listings, and supporting resources.',
-        'Cleaner browsing rhythm designed to make exploration feel easier.',
-        'Lightweight interactions that keep the experience fast and readable.',
+        'A quiet index of the internet worth keeping.',
+        'Save from anywhere, come back and it is still there.',
+        'Shelves are searchable and shareable.',
+        'Private by default; public when you want.',
       ],
-      primaryLink: { label: 'Browse articles', href: '/article' },
-      secondaryLink: { label: 'See visuals', href: '/image' },
+      primaryLink: { label: 'Open the Library', href: '/sbm' },
+      secondaryLink: { label: 'Browse collections', href: '/sbm' },
     },
     cta: {
-      badge: 'Start exploring',
-      title: 'Explore articles, visuals, and resources through one connected experience.',
-      description: 'Move between articles, image-led posts, listings, and resources through one clearer and more connected visual system.',
-      primaryCta: { label: 'Browse Articles', href: '/article' },
-      secondaryCta: { label: 'Contact Sales', href: '/contact' },
+      badge: 'Start a shelf',
+      title: 'Your best links, kept somewhere they will last.',
+      description:
+        'Sign in, save a link, drop it on a shelf. That is the entire onboarding — everything else grows from there.',
+      primaryCta: { label: 'Get started', href: '/signup' },
+      secondaryCta: { label: 'Say hello', href: '/contact' },
     },
     taskSection: {
-      heading: 'Latest {label}',
-      descriptionSuffix: 'Browse the newest posts in this section.',
+      heading: 'Latest on {label}',
+      descriptionSuffix: 'Fresh additions to the shelf.',
     },
   },
   about: {
-    badge: 'Our Story',
-    title: 'A calmer, clearer way to explore content.',
-    description: `${slot4BrandConfig.siteName} is built to make long-form reading, visual discovery, and supporting resources feel like one unified experience.`,
+    badge: 'Our story',
+    title: 'The web deserves a quieter place to keep the good bits.',
+    description: `${slot4BrandConfig.siteName} is a home for bookmarks, collections and references that would otherwise get lost in bookmark folders and read-later apps.`,
     paragraphs: [
-      'Instead of splitting everything into disconnected pages, the platform keeps related content easy to move through and easy to understand.',
-      'Whether someone starts with an article, listing, image post, or resource page, they can continue exploring without losing context.',
+      'Most tools want to show you what is new. This one wants to remember what was good — long after the tab is closed and the feed has moved on.',
+      'Every resource here has been added by a curator on purpose. No scraping, no algorithmic surfacing. Just tidy shelves you can reach for when you actually need something.',
+      'Browse without an account. Sign in when you want to keep your own shelf.',
     ],
     values: [
       {
-        title: 'Reading-first experience',
-        description: 'We prioritize clarity, pacing, and structure so people can read, browse, and discover without noise.',
+        title: 'Kept, not surfaced',
+        description:
+          'No feed to scroll, no ranking to fight. Every collection stays exactly the shape its curator gave it.',
       },
       {
-        title: 'Connected content surfaces',
-        description: 'Articles, visual posts, listings, resources, and profiles stay connected so discovery feels natural across the site.',
+        title: 'Shelves, not silos',
+        description:
+          'Move a resource between shelves any time. Split a shelf when it grows too broad. The structure follows the ideas, not the other way around.',
       },
       {
-        title: 'Simple and trustworthy',
-        description: 'We focus on clean navigation and clear page structure to help visitors find useful content faster.',
+        title: 'Quiet by design',
+        description:
+          'No notifications, no streaks, no engagement metrics on your screen. Just an index of things you might want to come back to.',
       },
     ],
   },
   contact: {
-    eyebrow: `Contact ${slot4BrandConfig.siteName}`,
-    title: 'A support page that matches the product, not a generic contact form.',
-    description: 'Tell us what you are trying to publish, fix, or launch. We will route it through the right lane instead of forcing every request into the same support bucket.',
+    eyebrow: `Write to ${slot4BrandConfig.siteName}`,
+    title: 'A resource, a shelf idea, a bug report — the inbox is real.',
+    description:
+      'Send us a link that belongs on a shelf, an idea for a whole new collection, an application to become a curator, or anything else on your mind.',
     formTitle: 'Send a message',
   },
 
   search: {
     metadata: {
-      title: 'Search',
-      description: 'Search posts, topics, categories, and content across the site.',
+      title: `Search — ${slot4BrandConfig.siteName}`,
+      description: 'Search across every public shelf on the Library.',
     },
     hero: {
-      badge: 'Search the archive',
-      title: 'Find stories, listings, visuals, and resources faster.',
-      description: 'Use keywords, categories, and content types to discover posts from every active section of the site.',
-      placeholder: 'Search by keyword, topic, category, or title',
+      badge: 'Search the Library',
+      title: 'Find any resource on any shelf.',
+      description:
+        'Type a keyword, narrow to a collection, and dig through every public shelf. Indexed continuously — nothing important goes missing.',
+      placeholder: 'Search resources, collections, curators…',
     },
-    resultsTitle: 'Latest searchable content',
+    resultsTitle: 'Everything on the shelf right now',
   },
   create: {
     metadata: {
-      title: 'Create',
-      description: 'Create and submit new content for the site.',
+      title: `Submit a resource — ${slot4BrandConfig.siteName}`,
+      description: 'Add a bookmark, tool, or reference to your shelves.',
     },
     locked: {
-      badge: 'Creator access',
-      title: 'Login to create new content.',
-      description: 'Use your account to open the publishing workspace and create posts for the active sections of this site.',
+      badge: 'Curator access',
+      title: 'Sign in to add to the shelves.',
+      description:
+        'Only signed-in curators can add resources. It is free — sign in or create an account and the workspace opens up.',
     },
     hero: {
-      badge: 'Publishing workspace',
-      title: 'Create content for every active section.',
-      description: 'Choose the content type, add details, and prepare a clean post with images, links, summary, and body content.',
+      badge: 'Curator workspace',
+      title: 'Add a resource to the shelf.',
+      description:
+        'Drop a URL, pick a shelf, add a note. Nothing more required — you can flesh it out later.',
     },
-    formTitle: 'Content details',
-    submitLabel: 'Submit content',
-    successTitle: 'Content submitted successfully.',
+    formTitle: 'Resource details',
+    submitLabel: 'File on the shelf',
+    successTitle: 'Filed successfully.',
   },
   auth: {
     login: {
-      metadataDescription: 'Login page for this site.',
-      badge: 'Member access',
-      title: 'Welcome back to your publishing space.',
-      description: 'Login to continue browsing, managing submissions, and creating new content from your account.',
-      formTitle: 'Login',
+      metadataDescription: `Log back into ${slot4BrandConfig.siteName}.`,
+      badge: 'Curator access',
+      title: 'Welcome back to the shelves.',
+      description:
+        'Log in to add resources, tidy your collections, and keep the shelves the way you left them.',
+      formTitle: 'Log in',
       submitLabel: 'Continue',
-      noAccount: 'No account matched these details. Create an account first, then login.',
-      success: 'Login successful. Redirecting...',
+      noAccount: 'No account matched — create one first, then log in.',
+      success: 'Signed in. Taking you to the shelves…',
       createCta: 'Create an account',
     },
     signup: {
-      metadataDescription: 'Signup page for this site.',
-      badge: 'Site access',
-      title: 'Create your account and start publishing.',
-      description: 'Create an account to access the publishing workspace, save details, and submit content through the site.',
-      formTitle: 'Create account',
+      metadataDescription: `Create an account on ${slot4BrandConfig.siteName}.`,
+      badge: 'Start a shelf',
+      title: 'One account, endless shelves.',
+      description:
+        'Create an account to start saving resources, building collections, and keeping the internet you actually use.',
+      formTitle: 'Create your account',
       submitLabel: 'Create account',
-      passwordShort: 'Use at least 4 characters for the password.',
-      success: 'Account created successfully. Redirecting...',
-      loginCta: 'Login',
+      passwordShort: 'Use at least 4 characters for your password.',
+      success: 'Account created. Opening the shelves…',
+      loginCta: 'Log in instead',
     },
   },
   detailPages: {
     article: {
-      relatedTitle: 'Related articles',
-      fallbackTitle: 'Article details',
+      relatedTitle: 'More notes on the shelf',
+      fallbackTitle: 'Note',
     },
     listing: {
-      relatedTitle: 'Related listings',
-      fallbackTitle: 'Listing details',
+      relatedTitle: 'More in the directory',
+      fallbackTitle: 'Directory record',
     },
     image: {
-      relatedTitle: 'Related visuals',
-      fallbackTitle: 'Image details',
+      relatedTitle: 'More visuals',
+      fallbackTitle: 'Visual',
     },
     profile: {
-      relatedTitle: 'Suggested articles',
-      fallbackDescription: 'Profile details will appear here once available.',
-      visitButton: 'Visit Official Site',
+      relatedTitle: 'From this curator',
+      fallbackDescription: 'Curator page — direct link only.',
+      visitButton: 'Visit website',
     },
   },
 } as const
