@@ -17,18 +17,18 @@ export const pagesContent = {
       keywords: ['bookmarks', 'collections', 'resources', 'curated links', 'reference'],
     },
     hero: {
-      badge: 'The Library · Curated finds',
-      title: ['Bookmarks worth', 'coming back to.'],
+      badge: 'Welcome to The Library',
+      title: ['Discover something', 'worth your time.'],
       description:
-        'A quiet home for the internet you actually use — save any link, sort it into a shelf, and come back to it whenever you need to.',
-      primaryCta: { label: 'Open the Library', href: '/sbm' },
+        'A calmer way to browse, explore and find what matters — one thoughtfully curated collection at a time.',
+      primaryCta: { label: 'Start exploring', href: '/sbm' },
       secondaryCta: { label: 'Browse collections', href: '/sbm' },
-      searchPlaceholder: 'Search collections, resources, curators…',
-      focusLabel: 'On the shelf',
+      searchPlaceholder: 'Search anything…',
+      focusLabel: 'In focus',
       featureCardBadge: 'Editor’s pick',
-      featureCardTitle: 'The best resource on the shelf this week.',
+      featureCardTitle: 'A standout worth your attention.',
       featureCardDescription:
-        'Every collection surfaces one Editor’s pick — a resource we keep reaching for and think you will too.',
+        'Every collection surfaces one Editor’s pick — the piece we think is worth spending time with.',
     },
     intro: {
       badge: 'How the Library works',
