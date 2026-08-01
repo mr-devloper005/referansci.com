@@ -67,9 +67,7 @@ export function EditableNavbar() {
     <header className="sticky top-0 z-50 bg-[color-mix(in_oklab,var(--editable-nav-bg)_92%,transparent)] text-[var(--editable-nav-text)] backdrop-blur-md">
       <nav className="mx-auto flex h-[72px] w-full max-w-[var(--editable-container-wide)] items-center gap-4 px-5 sm:px-6 lg:px-10">
         <Link href="/" className="group flex min-w-0 shrink-0 items-center gap-2.5">
-          <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-[var(--slot4-page-text)] text-white transition duration-500 group-hover:bg-[var(--slot4-accent)]">
-            <img src="/favicon.png?v=20260413" alt={SITE_CONFIG.name} className="h-10 w-10 object-contain invert" />
-          </span>
+          <img src="/favicon.png?v=20260413" alt={SITE_CONFIG.name} className="h-10 w-10 object-contain invert" />
           <span className="editable-display truncate text-lg font-normal tracking-[-0.01em] sm:text-xl">
             {SITE_CONFIG.name}
           </span>
