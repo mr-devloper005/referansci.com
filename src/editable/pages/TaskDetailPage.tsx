@@ -14,7 +14,6 @@ import {
   ExternalLink,
   FileText,
   Globe2,
-  Hash,
   Layers,
   Mail,
   MapPin,
@@ -369,7 +368,6 @@ function ImageDetail({ post, related }: { post: SitePost; related: SitePost[] })
 function BookmarkDetail({ post, related }: { post: SitePost; related: SitePost[] }) {
   const website = getField(post, ['website', 'url', 'link'])
   const domain = website ? cleanDomain(website) : ''
-  const tagList = Array.isArray(post.tags) ? post.tags.filter(Boolean) : []
   const rawCollection = categoryOf(post, 'Uncategorized')
   const collectionTheme =
     featuredCollections.find(
@@ -515,24 +513,6 @@ function BookmarkDetail({ post, related }: { post: SitePost; related: SitePost[]
 
             <BodyContent post={post} display />
 
-            {tagList.length ? (
-              <div className="mt-14 flex flex-wrap items-center gap-2">
-                <span className="mr-1 text-xs font-medium uppercase tracking-[0.24em] text-[var(--tk-muted)]">
-                  Tagged
-                </span>
-                {tagList.slice(0, 12).map((t) => (
-                  <Link
-                    key={t}
-                    href={`/search?q=${encodeURIComponent(String(t))}`}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-[var(--tk-line)] bg-white px-3.5 py-1.5 text-xs font-medium text-[var(--tk-text)] transition hover:border-[var(--tk-text)]"
-                  >
-                    <Hash className="h-3 w-3 text-[var(--tk-accent)]" />
-                    {t}
-                  </Link>
-                ))}
-              </div>
-            ) : null}
-
             {/* Bottom action band */}
             <div className="mt-14 flex flex-col items-start justify-between gap-4 rounded-[var(--tk-radius)] border border-[var(--tk-line)] bg-[var(--tk-raised)] p-6 sm:flex-row sm:items-center">
               <div>
@@ -585,7 +565,7 @@ function BookmarkDetail({ post, related }: { post: SitePost; related: SitePost[]
                 </span>
                 <div className="min-w-0">
                   <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--tk-muted)]">Resource</p>
-                  <p className="truncate text-sm font-medium text-[var(--tk-text)]">{domain || post.title}</p>
+                  <p className="truncate text-sm font-medium text-[var(--tk-text)]">{domain || 'Saved resource'}</p>
                 </div>
               </div>
               {website ? (
