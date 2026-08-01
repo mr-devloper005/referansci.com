@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowUpRight, Github, Instagram, Linkedin, Mail, Twitter } from 'lucide-react'
+import { ArrowUpRight, Mail } from 'lucide-react'
 import { SITE_CONFIG } from '@/lib/site-config'
 import {
   footerCollections,
@@ -84,9 +84,7 @@ export function EditableFooter() {
       <div className="mx-auto grid w-full max-w-[var(--editable-container-wide)] gap-14 px-5 pb-14 pt-16 sm:px-6 lg:grid-cols-[1.2fr_1.4fr_0.8fr_1fr] lg:gap-16 lg:px-10">
         <div>
           <Link href="/" className="inline-flex items-center gap-2.5">
-            <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white text-[var(--slot4-page-text)]">
-              <img src="/favicon.png?v=20260413" alt={brandName} className="h-10 w-10 object-contain" />
-            </span>
+            <img src="/favicon.png?v=20260413" alt={brandName} className="h-10 w-10 object-contain" />
             <span className="editable-display text-xl">{brandName}</span>
           </Link>
           <p className="mt-6 max-w-sm text-sm leading-7 text-white/70">
